@@ -1,11 +1,11 @@
-FROM mhart/alpine-node:6.9.2
+FROM node:6-alpine
 
-MAINTAINER geniousphp "geniousphp@gmail.com"
+MAINTAINER omercnet "git@omer.io"
 
-RUN npm install -g standard@9.0.1 \
-	&& npm install -g standard-reporter@1.0.5 \
-  && npm cache clean \
-	&& mkdir /standard
+RUN npm install -g standard && \
+    npm install -g standard-reporter && \
+    npm cache clean && \
+    mkdir /standard
 
 WORKDIR /standard
 
